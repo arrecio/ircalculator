@@ -1,5 +1,5 @@
 [project]
-name = "ircalculator"
+name = "irating-ircalculator"
 version = "0.0.1"
 authors = [
   { name="Víctor Arnelas", email="arrecio@gmail.com" },
