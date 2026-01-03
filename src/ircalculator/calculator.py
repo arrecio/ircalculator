@@ -63,4 +63,4 @@ class IRatingCalculator:
             else:
                 raceResults[i].calculatedIr = raceResults[i].initialIR + (-sum(changesStarters) / nNonStarters * expecteds[i] \
                     / (sumExpectedNonStarted / nNonStarters))
-        return raceResults
+        return [i.calculatedIr for i in raceResults]
