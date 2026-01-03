@@ -1,7 +1,7 @@
 
 # ircalculator
 
-Implements the iRating calculator formula used in https://github.com/SIMRacingApps/SIMRacingApps/files/3617438/iRacing.SOF.iRating.Calculator.v1_1.xlsx to estimate final ratings giving the results.
+Implements the iRating calculator formula used in https://github.com/SIMRacingApps/SIMRacingApps/files/3617438/iRacing.SOF.iRating.Calculator.v1_1.xlsx to estimate final ratings giving the results. Its also based on https://github.com/Turbo87/irating-rs.
 
 # Install
 
