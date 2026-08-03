@@ -23,11 +23,13 @@ Implements the iRating calculator formula used in https://github.com/SIMRacingAp
             IRatingResult("Driver 8",  8362,     False),
             IRatingResult("Driver 9",  6729,     False),
     ]
-    
-    newRatings = IRatingCalculator().calculate(results)
+
+    calculator = IRatingCalculator()
+    newRatings = calculator.calculate(results)
     # calculate returns an array with new iratings in order
     print(newRatings)
     # each intial IRatingResult has now an calculatedIr property with their calculated values
     for result in results:
         print(result)
-
+    # you can also calculate SoF based on the list given
+    print(calculator.calculate(results))
