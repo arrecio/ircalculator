@@ -28,7 +28,15 @@ class IRatingResult():
         return self.__str__()
 
 class IRatingCalculator:
-
+    
+    # experimental new feature based on this formula: https://www.reddit.com/r/iRacing/comments/109844n/comment/j3x1lyn/
+    def calculate_sof(self, raceResults):
+        nTotal = len(raceResults)
+        sofSum = 0
+        for i in range(nTotal):
+            sofSum += math.pow(2, -raceResults[i].initialIR / 1600)
+        return 1600 / math.log(2) * math.log(nTotal / sofSum);
+        
     def calculate(self, raceResults):
         nTotal = len(raceResults)
         nStarters = len([result for result in raceResults if result.started])
