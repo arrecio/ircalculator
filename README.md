@@ -3,6 +3,8 @@
 
 Implements the iRating calculator formula used in https://github.com/SIMRacingApps/SIMRacingApps/files/3617438/iRacing.SOF.iRating.Calculator.v1_1.xlsx to estimate final ratings giving the results. Its also based on https://github.com/Turbo87/irating-rs.
 
+It also calculates the SoF (Strength of Field) using the same input data structure (view example below), although neither the order in the list nor the field indicating whether the driver finished the race affects the SoF result.
+
 # Install
 
     pip install irating-ircalculator
@@ -28,8 +30,9 @@ Implements the iRating calculator formula used in https://github.com/SIMRacingAp
     newRatings = calculator.calculate(results)
     # calculate returns an array with new iratings in order
     print(newRatings)
-    # each intial IRatingResult has now an calculatedIr property with their calculated values
+    # each intial IRatingResult in the list has now a valid calculatedIr property with their calculated values
     for result in results:
         print(result)
+        
     # you can also calculate SoF based on the list given
     print(calculator.calculate_sof(results))
