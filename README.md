@@ -32,4 +32,4 @@ Implements the iRating calculator formula used in https://github.com/SIMRacingAp
     for result in results:
         print(result)
     # you can also calculate SoF based on the list given
-    print(calculator.calculate(results))
+    print(calculator.calculate_sof(results))
